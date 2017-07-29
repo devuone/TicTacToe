@@ -1,0 +1,28 @@
+<div class="gameArea">
+<table class="mainGrid" cellspacing=10>
+<!--<tr>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[0]"></block></td>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[1]"></block></td>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[2]"></block></td>
+</tr>
+<tr>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[3]"></block></td>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[4]"></block></td>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[5]"></block></td>
+</tr>
+<tr>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[6]"></block></td>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[7]"></block></td>
+<td class="block"><block (onBlockClick)="onBlockClick($event)" [block]="blocks[8]"></block></td>
+</tr>-->
+<tr *ngFor="let i of [0,1,2]">
+  <td *ngFor="let j of [0,3,6]" class="block">
+  <block (onBlockClick)="onBlockClick($event)" [block]="blocks[i+j]"></block>  
+  </td>
+</tr>
+</table>
+<playerTurn *ngIf="!(won || gameEnd) " [player]="player"></playerTurn>
+<br>
+<h1 *ngIf="won" >Player {{player}} won !!</h1>
+<button *ngIf="won || gameEnd" (click)="resetGame()" >Click to Play Again</button>
+</div>
