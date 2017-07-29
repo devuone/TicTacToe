@@ -1,6 +1,6 @@
 # Tic Tac Toe in Angular2 with AI
 
-#[CHECK DEMO HERE](https://tictactoe-7a3c9.firebaseapp.com/)
+[CHECK DEMO HERE](https://tictactoe-7a3c9.firebaseapp.com/)
 
 I created this game to learn Angular2 fundamentals
 
